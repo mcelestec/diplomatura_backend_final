@@ -7,8 +7,7 @@ var pool  = mysql.createPool({
   host            : process.env.MySQL_HOST,
   user            : process.env.MySQL_USER,
   password        : process.env.MySQL_PASSWORD,
-  database        : process.env.MySQL_DB_NAME,
-  port            : process.env.MySQL_PORT,
+  database        : process.env.MySQL_DB_NAME
 });
 
 pool.query = util.promisify(pool.query);
